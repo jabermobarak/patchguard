@@ -1,0 +1,226 @@
+{
+  "dataset": "Procedural woven texture v1; synthetic demonstration only",
+  "seed_ranges": {
+    "train": [
+      1000,
+      1079
+    ],
+    "calibration": [
+      2000,
+      2059
+    ],
+    "test": [
+      3000,
+      3159
+    ]
+  },
+  "split_counts": {
+    "train_normal": 80,
+    "calibration_normal": 60,
+    "test": 160
+  },
+  "threshold_policy": "97.5th percentile of normal calibration image scores; frozen for all tests",
+  "pixel_policy": "99.5th percentile of normal calibration patch scores",
+  "model_id": "3f5c89899349",
+  "onnx_max_abs_error": 1.9073486328125e-05,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "threads": "runtime default"
+  },
+  "results": {
+    "clean": {
+      "n": 160,
+      "route_counts": {
+        "normal": 39,
+        "anomaly": 120,
+        "review": 1
+      },
+      "automatic_coverage": 0.99375,
+      "accepted_errors": 0,
+      "image_auroc": 1.0,
+      "image_auroc_ci95": [
+        0.9999999999999999,
+        1.0
+      ],
+      "image_average_precision": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "normal_false_positive_rate": 0.0,
+      "pixel_auroc": 0.9983690271302863,
+      "defect_mean_iou": 0.17042908897930525,
+      "latency_ms_p50": 2.0540275000371366,
+      "latency_ms_p95": 4.6599427500552775,
+      "confusion": {
+        "tn": 40,
+        "fp": 0,
+        "fn": 0,
+        "tp": 120
+      },
+      "by_defect": {
+        "normal": {
+          "count": 40,
+          "flagged": 0
+        },
+        "scratch": {
+          "count": 40,
+          "flagged": 40
+        },
+        "stain": {
+          "count": 40,
+          "flagged": 40
+        },
+        "hole": {
+          "count": 40,
+          "flagged": 40
+        }
+      }
+    },
+    "bright": {
+      "n": 160,
+      "route_counts": {
+        "normal": 0,
+        "anomaly": 0,
+        "review": 160
+      },
+      "automatic_coverage": 0.0,
+      "accepted_errors": 0,
+      "image_auroc": 0.94875,
+      "image_auroc_ci95": [
+        0.9133285024154589,
+        0.9786074055984615
+      ],
+      "image_average_precision": 0.9840168535261304,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "normal_false_positive_rate": 1.0,
+      "pixel_auroc": 0.9361856000773618,
+      "defect_mean_iou": 0.007696533203125,
+      "latency_ms_p50": 1.973561000056634,
+      "latency_ms_p95": 2.6972639500684172,
+      "confusion": {
+        "tn": 0,
+        "fp": 40,
+        "fn": 0,
+        "tp": 120
+      },
+      "by_defect": {
+        "normal": {
+          "count": 40,
+          "flagged": 40
+        },
+        "scratch": {
+          "count": 40,
+          "flagged": 40
+        },
+        "stain": {
+          "count": 40,
+          "flagged": 40
+        },
+        "hole": {
+          "count": 40,
+          "flagged": 40
+        }
+      }
+    },
+    "blur": {
+      "n": 160,
+      "route_counts": {
+        "normal": 0,
+        "anomaly": 0,
+        "review": 160
+      },
+      "automatic_coverage": 0.0,
+      "accepted_errors": 0,
+      "image_auroc": 1.0,
+      "image_auroc_ci95": [
+        0.9999999999999999,
+        1.0
+      ],
+      "image_average_precision": 1.0,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "normal_false_positive_rate": 1.0,
+      "pixel_auroc": 0.998260221435593,
+      "defect_mean_iou": 0.008833751786503688,
+      "latency_ms_p50": 1.9274220000511377,
+      "latency_ms_p95": 2.893796199992945,
+      "confusion": {
+        "tn": 0,
+        "fp": 40,
+        "fn": 0,
+        "tp": 120
+      },
+      "by_defect": {
+        "normal": {
+          "count": 40,
+          "flagged": 40
+        },
+        "scratch": {
+          "count": 40,
+          "flagged": 40
+        },
+        "stain": {
+          "count": 40,
+          "flagged": 40
+        },
+        "hole": {
+          "count": 40,
+          "flagged": 40
+        }
+      }
+    },
+    "rgb_only_clean": {
+      "n": 160,
+      "route_counts": {
+        "normal": 38,
+        "anomaly": 120,
+        "review": 2
+      },
+      "automatic_coverage": 0.9875,
+      "accepted_errors": 0,
+      "image_auroc": 1.0,
+      "image_auroc_ci95": [
+        0.9999999999999999,
+        1.0
+      ],
+      "image_average_precision": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "normal_false_positive_rate": 0.0,
+      "pixel_auroc": 0.9986911000497339,
+      "defect_mean_iou": 0.21293215777238567,
+      "latency_ms_p50": 0.4130499999632775,
+      "latency_ms_p95": 0.5586532000450005,
+      "confusion": {
+        "tn": 40,
+        "fp": 0,
+        "fn": 0,
+        "tp": 120
+      },
+      "by_defect": {
+        "normal": {
+          "count": 40,
+          "flagged": 0
+        },
+        "scratch": {
+          "count": 40,
+          "flagged": 40
+        },
+        "stain": {
+          "count": 40,
+          "flagged": 40
+        },
+        "hole": {
+          "count": 40,
+          "flagged": 40
+        }
+      }
+    }
+  }
+}
