@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PatchGuard · Visual Inspection</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><a class="brand" href="/">◈ <span>PatchGuard</span></a><span class="tag">VISUAL INSPECTION LAB</span><a href="/docs">API docs ↗</a></header>
+<main>
+<div class="eyebrow"><span class="dot"></span> NORMAL-ONLY ANOMALY DETECTION</div>
+<div class="intro"><div><h1>Find the flaw.<br><span>See the evidence.</span></h1><p>Compare a surface against learned normal appearance.<br>Inspect unusual regions, scores, and review decisions.</p></div><div class="model-pill"><span>ACTIVE MODEL</span><strong id="model-id">Loading…</strong><small id="model-features">Spatial Gaussian · CPU inference</small></div></div>
+<div class="notice">Demo model trained on synthetic woven textures. Other surfaces need their own training and calibration images.</div>
+<div class="workspace">
+<aside><h2>01 <span>Choose a sample</span></h2><p class="muted">Try the held-out examples or upload a surface.</p><div id="samples" class="samples"></div>
+<label class="upload" for="file"><span>+</span><strong>Upload an image</strong><small>PNG, JPEG, WebP · up to 8 MiB</small></label><input type="file" id="file" accept="image/png,image/jpeg,image/webp">
+<div class="method"><h3>How inspection works</h3><ol><li>Extract color and texture features</li><li>Compare each patch to normal data</li><li>Highlight regions that need attention</li></ol><p>Scores are deviations, not probabilities.</p></div>
+</aside>
+<section class="inspection" aria-label="Inspection results"><div class="section-top"><h2>02 <span>Inspect the surface</span></h2><span id="state">Ready</span></div>
+<div class="image-grid"><figure><figcaption>INPUT SURFACE</figcaption><div class="image-wrap"><img id="original" alt="Selected input surface"></div></figure><figure><figcaption>ANOMALY HEATMAP <span class="legend">LOW <i></i> HIGH</span></figcaption><div class="image-wrap"><img id="overlay" alt="Anomaly heatmap overlay"></div></figure></div>
+<div class="result-strip"><div><span class="label">DECISION</span><strong id="decision">—</strong></div><div><span class="label">SCORE / THRESHOLD</span><strong id="ratio">—</strong></div><div><span class="label">UNUSUAL REGIONS</span><strong id="regions">—</strong></div><div><span class="label">SERVICE LATENCY</span><strong id="latency">—</strong></div></div>
+<div class="score-area"><div class="score-label"><span>Normal appearance</span><span>Review band</span><span>Anomalous</span></div><div class="score-track"><div class="band"></div><div id="marker"></div></div><p id="explanation" role="status" aria-live="polite">Select a sample to start an inspection.</p></div>
+<details><summary>Inspection details and JSON export</summary><button id="download" disabled>Download result JSON ↓</button><pre id="details">No inspection yet.</pre></details>
+</section>
+</div>
+<footer><span>PATCHGUARD / 0.1</span><span>Independent computer vision project by Jaber Mobarak</span><a href="/metrics">Service metrics ↗</a></footer>
+</main><script src="/static/app.js" defer></script>
+</body></html>
